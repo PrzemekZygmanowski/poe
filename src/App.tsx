@@ -1,5 +1,7 @@
 import "./App.css";
 import { Avatar } from "./components/Avatar";
+import { ChatForm } from "./components/ChatForm";
+import { ChatContent } from "./components/ChatContent";
 import { invoke } from "@tauri-apps/api";
 
 function App() {
@@ -11,6 +13,8 @@ function App() {
     <div className='bg-darkBlue h-screen'>
       {" "}
       <Avatar />
+      <ChatContent />
+      <ChatForm />
     </div>
   );
 }

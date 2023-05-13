@@ -10,7 +10,7 @@ function App() {
     .then(response => console.log(response));
 
   return (
-    <div className='bg-darkBlue h-screen'>
+    <div className='bg-darkBlue h-screen flex flex-col items-center'>
       {" "}
       <Avatar />
       <ChatContent />

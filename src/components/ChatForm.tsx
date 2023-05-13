@@ -27,10 +27,10 @@ export const ChatForm = () => {
           name='message'
           type='text'
           placeholder='Napisz coś...'
-          className='bg-darkBlue text-lightBlue rounded rounded-r-none border-lightBlue border-2 border-r-0 w-full outline-0 py-4'
+          className='bg-darkBlue text-white rounded rounded-r-none border-grey focus:border-lightBlue border-2 border-r-0 w-full outline-0 px-4'
         />
         <button
-          className='bg-darkBlue text-lightBlue rounded rounded-l-none border-lightBlue border-2 '
+          className='bg-darkBlue text-lightBlue rounded rounded-l-none border-grey border-2 active:outline-0'
           type='submit'>
           <span className='p-4'>Wyślij</span>
         </button>

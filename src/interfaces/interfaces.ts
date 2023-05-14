@@ -1,4 +1,4 @@
-export interface Chat {
+export interface Bot {
   id: number;
   title: string;
   date: string;

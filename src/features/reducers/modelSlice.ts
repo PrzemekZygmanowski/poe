@@ -1,7 +1,7 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
-import { Chat } from "../../interfaces/interfaces";
+import { Bot } from "../../interfaces/interfaces";
 
-const initialState: Chat = {
+const initialState: Bot = {
   id: 1,
   title: "Does drinking coffee make you smarter?",
   date: "5h ago",
@@ -13,7 +13,7 @@ export const modelSlice = createSlice({
   name: "model",
   initialState,
   reducers: {
-    switchModel(state, action: PayloadAction<Chat>) {
+    switchModel(state, action: PayloadAction<Bot>) {
       return { ...state, ...action.payload };
     },
   },

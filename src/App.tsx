@@ -1,7 +1,6 @@
 import "./App.css";
-import { Avatar } from "./components/Avatar";
-import { ChatForm } from "./components/ChatForm";
-import { ChatContent } from "./components/ChatContent";
+
+import { Layout } from "./vievs/Layout";
 import { invoke } from "@tauri-apps/api";
 
 function App() {
@@ -10,11 +9,8 @@ function App() {
     .then(response => console.log(response));
 
   return (
-    <div className='bg-darkBlue h-screen flex flex-col items-center'>
-      {" "}
-      <Avatar />
-      <ChatContent />
-      <ChatForm />
+    <div className='bg-darkBlue min-h-full flex flex-col items-center'>
+      <Layout />
     </div>
   );
 }

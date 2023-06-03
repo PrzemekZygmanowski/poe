@@ -4,8 +4,8 @@ import { ChatForm } from "../components/ChatForm";
 export const Chat = () => {
   return (
     <>
-      <ChatForm />
       <ChatContent />
+      <ChatForm />
     </>
   );
 };

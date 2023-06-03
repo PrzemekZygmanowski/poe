@@ -1,4 +1,3 @@
-import { useContext } from "react";
 import "./ChatContent.css";
 
 export const ChatContent = () => {

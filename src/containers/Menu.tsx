@@ -1,6 +1,7 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import { ReactElement, useState } from "react";
 import { Tab } from "@headlessui/react";
-import { useSelector, useDispatch } from "react-redux";
+import { useDispatch } from "react-redux";
 import { switchModel } from "../features/reducers/modelSlice";
 import { bots as botsCategories } from "../data/models/models";
 
@@ -45,7 +46,7 @@ export const MenuComponent = ({ children }: Props) => {
         </Tab.List>
         <Tab.Panels className='mt-2'>
           {Object.values(tabs).map(idx => (
-            <Tab.Panel className='flex flex-col items-center'>
+            <Tab.Panel className='flex flex-col items-center' key={idx.id}>
               {children}
             </Tab.Panel>
           ))}

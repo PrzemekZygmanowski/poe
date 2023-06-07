@@ -1,11 +1,15 @@
-import { FontAwesomeIcon, } from '@fortawesome/react-fontawesome'
-import { icon, IconName } from '@fortawesome/fontawesome-svg-core/import.macro'
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { IconProp } from "@fortawesome/fontawesome-svg-core";
 
-interface linkIcon{
-url: string,
-iconText:IconName,
+interface linkIcon {
+  url: string;
+  iconText: IconProp;
 }
 
-export const LinkIcon = ({url, iconText}:linkIcon) => {
-  return <FontAwesomeIcon icon={icon({name: `${iconText}`})}
-}
+export const LinkIcon = ({ url, iconText }: linkIcon) => {
+  return (
+    <a href={url} className='mx-5 w-8 aspect-square	'>
+      <FontAwesomeIcon icon={iconText} size='lg' />
+    </a>
+  );
+};

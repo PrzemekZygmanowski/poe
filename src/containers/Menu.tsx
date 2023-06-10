@@ -28,19 +28,19 @@ export const MenuComponent = ({ children }: Props) => {
         onChange={index => {
           dispatch(switchModel(arrayOfModels[index]));
         }}>
-        <Tab.List className='flex space-x-1 rounded-xl bg-darkSky p-1'>
-          {Object.keys(tabs).map(category => (
+        <Tab.List className='flex space-x-1 rounded-xl bg-darkSky_950 p-1'>
+          {tabs.map(category => (
             <Tab
-              key={category}
+              key={category.id}
               className={({ selected }) =>
                 classNames(
-                  "w-full rounded-lg py-2.5 text-sm font-medium leading-5 text-darkBlue",
+                  "w-full rounded-lg py-2.5 text-sm font-medium leading-5 text-darkSlate_900",
                   selected
-                    ? "bg-lightBlue shadow"
-                    : "text-white hover:bg-white/[0.12] hover:text-white"
+                    ? "bg-lightSky_400 shadow"
+                    : "text-lightSlate_100 hover:bg-lightSlate_100/[0.12] hover:text-lightSlate_100"
                 )
               }>
-              {category}
+              {category.title}
             </Tab>
           ))}
         </Tab.List>

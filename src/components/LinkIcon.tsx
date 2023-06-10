@@ -1,14 +1,12 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { IconProp } from "@fortawesome/fontawesome-svg-core";
-
-interface linkIcon {
-  url: string;
-  iconText: IconProp;
-}
+import { linkIcon } from "./interfaces";
 
 export const LinkIcon = ({ url, iconText }: linkIcon) => {
   return (
-    <a href={url} className='mx-5 w-8 aspect-square	'>
+    <a
+      href={url}
+      target='_blank'
+      className='mx-5 w-8 aspect-square	text-lightSlate_400 focus:text-lightSky_400'>
       <FontAwesomeIcon icon={iconText} size='lg' />
     </a>
   );

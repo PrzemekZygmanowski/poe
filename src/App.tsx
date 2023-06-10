@@ -9,7 +9,7 @@ function App() {
     .then(response => console.log(response));
 
   return (
-    <div className='bg-darkBlue min-h-full flex flex-col items-center'>
+    <div className='bg-darkSlate_900  h-screen min-h-fit	 flex flex-col items-center'>
       <Layout />
     </div>
   );

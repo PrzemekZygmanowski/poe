@@ -1,4 +1,5 @@
 import { IconProp } from "@fortawesome/fontawesome-svg-core";
+import { MouseEventHandler, ReactElement } from "react";
 
 export interface shortcut {
   shortcutText: string;
@@ -16,4 +17,16 @@ export interface message {
 
 export interface Answer {
   answer: string;
+}
+
+export interface buttonIcon {
+  handleClick: MouseEventHandler<HTMLButtonElement> | undefined;
+  iconText: IconProp;
+}
+
+export interface bigDialog {
+  isModalActive: boolean;
+  handleCloseDialog: () => void;
+  children?: ReactElement | ReactElement[];
+  title?: string;
 }

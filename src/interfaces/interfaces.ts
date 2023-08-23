@@ -1,3 +1,5 @@
+import { IconProp } from "@fortawesome/fontawesome-svg-core";
+
 export interface Bot {
   id: number;
   title: string;
@@ -6,3 +8,16 @@ export interface Bot {
   shareCount: number;
   key?: string;
 }
+
+export interface IShortCut {
+  id: number;
+  title: string;
+  icon: IconProp;
+  chatParams: {
+    model: string;
+    context: string;
+    category: string;
+  };
+}
+
+export type IShortCuts = IShortCut[];

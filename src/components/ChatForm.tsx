@@ -25,7 +25,7 @@ export const ChatForm = () => {
         <button
           className='bg-darkSlate_900 text-lightSky_400 rounded rounded-l-none border-lightSlate_400 border-2 active:outline-0'
           type='submit'>
-          <span className='p-4'>Wyślij</span>
+          <span className='p-4'>Send</span>
         </button>
       </Form>
     </Formik>

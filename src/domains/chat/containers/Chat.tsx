@@ -1,6 +1,6 @@
 import { ChatContent } from "../components/ChatContent";
 import { ChatForm } from "../components/ChatForm";
-import { SmallTitle } from "../components/typography/SmallTitle";
+import { SmallTitle } from "../../../components/typography/SmallTitle";
 
 export const Chat = () => {
   return (

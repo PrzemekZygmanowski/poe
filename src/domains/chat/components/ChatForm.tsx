@@ -1,8 +1,8 @@
 import { Field, Form, Formik } from "formik";
-import { message } from "./interfaces";
+import { IMessage } from "../../../interfaces/interfaces";
 
 export const ChatForm = () => {
-  const initialValues: message = { message: "" };
+  const initialValues: IMessage = { message: "" };
 
   return (
     <Formik

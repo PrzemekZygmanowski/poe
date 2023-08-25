@@ -1,5 +1,13 @@
 import { IconProp } from "@fortawesome/fontawesome-svg-core";
 
+export interface IMessage {
+  message: string;
+}
+
+export interface Answer {
+  answer: string;
+}
+
 export interface Bot {
   id: number;
   title: string;

@@ -1,6 +1,6 @@
-import { Avatar } from "../components/Avatar";
-import { BigDialog } from "../components/BigDialog";
-import { bigDialog } from "../components/interfaces";
+import { Avatar } from "../../../components/Avatar";
+import { BigDialog } from "../../../components/BigDialog";
+import { bigDialog } from "../../../components/interfaces";
 
 export const AppMenuDialog = ({
   isModalActive,

@@ -1,8 +1,8 @@
-import { LinkIcon } from "../components/LinkIcon";
+import { LinkIcon } from "../../../components/LinkIcon";
 import { faComments } from "@fortawesome/free-solid-svg-icons";
 import { faFutbol } from "@fortawesome/free-solid-svg-icons";
 import { faGear } from "@fortawesome/free-solid-svg-icons";
-import { ButtonIcon } from "../components/ButtonIcon";
+import { ButtonIcon } from "../../../components/ButtonIcon";
 import { AppMenuDialog } from "./AppMenuDialog";
 import { useState } from "react";
 

@@ -13,6 +13,16 @@ import { IShortCuts } from "../../interfaces/interfaces";
 
 export const shortcuts: IShortCuts = [
   {
+    id: 0,
+    title: "Just talk",
+    icon: faPenToSquare,
+    chatParams: {
+      model: "gpt-3.5-turbo",
+      category: "note",
+      context: "",
+    },
+  },
+  {
     id: 1,
     title: "Fix Typos",
     icon: faPenToSquare,

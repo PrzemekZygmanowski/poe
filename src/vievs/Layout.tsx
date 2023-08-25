@@ -1,6 +1,6 @@
-import { Chat } from "../containers/Chat";
-import { ShortCuts } from "../containers/ShortCuts";
-import { AppMenu } from "../containers/AppMenu";
+import { Chat } from "../domains/chat/containers/Chat";
+import { ShortCuts } from "../domains/shortcuts/containers/ShortCuts";
+import { AppMenu } from "../domains/mainMenu/containers/AppMenu";
 
 export const Layout = () => {
   return (

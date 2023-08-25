@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react";
 
-import { ShortCuts } from "../containers/ShortCuts";
+import { ShortCuts } from "../domains/shortcuts/containers/ShortCuts";
 const meta: Meta<typeof ShortCuts> = {
   title: "containers/Shortcut",
   component: ShortCuts,

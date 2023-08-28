@@ -1,6 +1,6 @@
 import { IconProp } from "@fortawesome/fontawesome-svg-core";
 
-export interface IShortcut {
+export interface IShortcutProps {
   shortcutText: string;
   iconText: IconProp;
   status: "active" | "inactive";

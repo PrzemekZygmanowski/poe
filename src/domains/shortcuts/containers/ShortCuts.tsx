@@ -2,6 +2,7 @@ import { Shortcut } from "../components/Shortcut";
 import { SmallTitle } from "../../../components/typography/SmallTitle";
 import { shortcuts } from "../../../data/models/shortcuts";
 import { useState } from "react";
+import { IShortCut } from "../../../interfaces/interfaces";
 
 export const ShortCuts = () => {
   const [activeShortcut, setActiveShortcut] = useState<number | null>(0);
@@ -16,7 +17,7 @@ export const ShortCuts = () => {
         <SmallTitle smallTitleText='Shortcuts' />
       </div>
       <div className='grid gap-y-4 grid-cols-5 auto-cols-max'>
-        {shortcuts.map(shortcut => (
+        {shortcuts.map((shortcut: IShortCut) => (
           <div
             onClick={() => toggleActiveShortcut(shortcut.id)}
             key={shortcut.id}>

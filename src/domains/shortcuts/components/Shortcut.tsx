@@ -1,8 +1,12 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { ShortcutTitle } from "../../../components/typography/ShortcutTitle";
-import { IShortcut } from "../helpers/interfaces";
+import { IShortcutProps } from "../helpers/interfaces";
 
-export const Shortcut = ({ shortcutText, iconText, status }: IShortcut) => {
+export const Shortcut = ({
+  shortcutText,
+  iconText,
+  status,
+}: IShortcutProps) => {
   const colorVariants = {
     active: "border-lightSky_400 text-lightSky_400",
     inactive: "border-lightSlate_400 text-lightSlate_400",

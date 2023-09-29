@@ -8,4 +8,5 @@ export interface paragraph {
 
 export interface shortcut {
   shortcutText: string;
+  textColor: "active" | "inactive";
 }

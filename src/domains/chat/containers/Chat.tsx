@@ -1,38 +1,7 @@
 import { ChatContent } from "../components/ChatContent";
 import { ChatForm } from "../components/ChatForm";
 import { SmallTitle } from "../../../components/typography/SmallTitle";
-import { IConversations } from "../helpers/interfaces";
-
-const conversationsArray: IConversations = {
-  conversations: [
-    { question: "cześć", answer: "Cześć Przemek" },
-    {
-      question: "Jak masz na imię",
-      answer:
-        "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quos ex officiis placeat cupiditate fugiat iusto fugit id quam ipsam aspernatur vitae blanditiis voluptas incidunt explicabo, dolor similique sed asperiores animi?",
-    },
-    {
-      question: "Jak masz na imię",
-      answer:
-        "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quos ex officiis placeat cupiditate fugiat iusto fugit id quam ipsam aspernatur vitae blanditiis voluptas incidunt explicabo, dolor similique sed asperiores animi?",
-    },
-    {
-      question: "Jak masz na imię",
-      answer:
-        "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quos ex officiis placeat cupiditate fugiat iusto fugit id quam ipsam aspernatur vitae blanditiis voluptas incidunt explicabo, dolor similique sed asperiores animi?",
-    },
-    {
-      question: "Jak masz na imię",
-      answer:
-        "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quos ex officiis placeat cupiditate fugiat iusto fugit id quam ipsam aspernatur vitae blanditiis voluptas incidunt explicabo, dolor similique sed asperiores animi?",
-    },
-    {
-      question: "Jak masz na imię",
-      answer:
-        "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quos ex officiis placeat cupiditate fugiat iusto fugit id quam ipsam aspernatur vitae blanditiis voluptas incidunt explicabo, dolor similique sed asperiores animi?",
-    },
-  ],
-};
+import { conversationsArray } from "../../../data/mocks/conversation.ts";
 
 export const Chat = () => {
   const { conversations } = conversationsArray;

@@ -1,6 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react";
-
-import { AppMenu } from "../containers/AppMenu";
+import { AppMenu } from "../domains/mainMenu/containers/AppMenu";
 
 const meta: Meta<typeof AppMenu> = {
   title: "containers/AppMenu",

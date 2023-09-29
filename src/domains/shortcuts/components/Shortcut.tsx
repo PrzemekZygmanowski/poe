@@ -8,7 +8,7 @@ export const Shortcut = ({
   status,
 }: IShortcutProps) => {
   const colorVariants = {
-    active: "border-lightSky_400 text-lightSky_400",
+    active: "border-lightSky_400 bg-lightSky_400 text-darkSky_950",
     inactive: "border-lightSlate_400 text-lightSlate_400",
   };
 
@@ -16,7 +16,7 @@ export const Shortcut = ({
     <button
       className={`${colorVariants[status]} p-4 flex flex-col items-center justify-evenly w-28 h-28 border-solid border-2 rounded aspect-square`}>
       <FontAwesomeIcon icon={iconText} />
-      <ShortcutTitle shortcutText={shortcutText} />
+      <ShortcutTitle shortcutText={shortcutText} textColor={status} />
     </button>
   );
 };

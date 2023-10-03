@@ -2,7 +2,7 @@ import { configureStore } from "@reduxjs/toolkit";
 import modelReducer from "./features/reducers/modelSlice";
 import shortcutStateSlice from "./domains/shortcuts/features/reducers/shortcutStateSlice";
 
-export const store = configureStore({
+const store = configureStore({
   reducer: { model: modelReducer, shortcutState: shortcutStateSlice },
 });
 
@@ -10,3 +10,5 @@ export const store = configureStore({
 export type RootState = ReturnType<typeof store.getState>;
 // Inferred type: {posts: PostsState, comments: CommentsState, users: UsersState}
 export type AppDispatch = typeof store.dispatch;
+
+export default store;

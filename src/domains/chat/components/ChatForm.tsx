@@ -1,11 +1,15 @@
-import { Field, Form, Formik } from "formik";
+import { Form, Formik } from "formik";
 import { IMessage } from "../../../interfaces/interfaces";
 import { useEffect, useRef, useState, ChangeEvent } from "react";
+// import { useAppSelector } from "../../../features/hooks/redux";
+// import { selectShortcutState } from "../../shortcuts/features/reducers/shortcutStateSlice";
+import { IChatForm } from "../helpers/interfaces";
 
-export const ChatForm = () => {
+export const ChatForm = ({ sendMessage }: IChatForm) => {
   const initialValues: IMessage = { message: "" };
   const textAreaRef = useRef<HTMLTextAreaElement>(null);
   const [text, setText] = useState("");
+  // const options = useAppSelector(state => selectShortcutState);
 
   const minHeight = 40;
   const maxHeight = 200;
@@ -34,8 +38,7 @@ export const ChatForm = () => {
         const message = JSON.stringify(values, null, 2);
         setTimeout(() => {
           console.log(message);
-          setText("");
-
+          sendMessage(message);
           setSubmitting(false);
         }, 400);
       }}>

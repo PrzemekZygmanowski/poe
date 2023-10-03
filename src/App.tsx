@@ -8,6 +8,8 @@ function App() {
     // `invoke` returns a Promise
     .then(response => console.log(response));
 
+  console.warn(`POE is running on ${import.meta.env.VITE_ENV_NAME} mode`);
+
   return (
     <div className='bg-darkSlate_900  h-screen min-h-fit	 flex flex-col items-center'>
       <Layout />

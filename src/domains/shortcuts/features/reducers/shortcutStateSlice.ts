@@ -35,9 +35,10 @@ export const shortcutStateSlice = createSlice({
   },
 });
 
-export const { setShortcutState, reset } = shortcutStateSlice.actions;
+export const { setShortcutState, reset, updateChatParam } =
+  shortcutStateSlice.actions;
 
-// export const selectCarState = state => state.carState;
+export const selectShortcutState = (state: IShortCut) => state;
 // export const selectEngineStatus = state => state.carState.engineOn;
 // export const selectNavigationStatus = state => state.carState.navigationOn;
 

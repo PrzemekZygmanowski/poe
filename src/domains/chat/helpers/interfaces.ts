@@ -6,3 +6,7 @@ export interface IConversation {
 export interface IConversations {
   conversations: IConversation[];
 }
+
+export interface IChatForm {
+  sendMessage: (message: string) => void;
+}

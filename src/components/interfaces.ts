@@ -14,6 +14,11 @@ export interface buttonIcon {
 export interface bigDialog {
   isModalActive: boolean;
   handleCloseDialog: () => void;
+  sendMessage?: (message: string) => void;
   children?: ReactElement | ReactElement[];
   title?: string;
+}
+
+export interface chatDialog extends bigDialog {
+  sendMessage: (message: string) => void;
 }

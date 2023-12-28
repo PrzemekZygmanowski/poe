@@ -5,6 +5,8 @@ import { IShortCut } from "../../../interfaces/interfaces";
 import { useAppDispatch } from "../../../features/hooks/redux";
 import { setShortcutState } from "../features/reducers/shortcutStateSlice";
 import { useShortcuts } from "../../../features/api/useShortcuts";
+import { ShortcutError } from "../../../components/ShortcutError";
+import { SpinnerLoader } from "../../../components/SpinnerLoader";
 
 export const ShortCuts = () => {
   const [activeShortcut, setActiveShortcut] = useState<number | null>(0);
@@ -24,8 +26,8 @@ export const ShortCuts = () => {
         <SmallTitle smallTitleText='Shortcuts' />
       </div>
       <div className='grid gap-y-4 grid-cols-5 auto-cols-max'>
-        {status === "loading" && <div>Loading...</div>}
-        {status === "error" && <div>Error</div>}
+        {status === "loading" && <SpinnerLoader />}
+        {status === "error" && <ShortcutError />}
         {data &&
           data.map((shortcut: IShortCut) => (
             <div

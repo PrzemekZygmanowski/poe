@@ -16,7 +16,7 @@ export const BigChat = ({
       isModalActive={isModalActive}
       handleCloseDialog={handleCloseDialog}
       title='Chat'>
-      <div className='flex flex-col justify-center items-center'>
+      <div className='flex flex-col justify-center items-center min-h-screen'>
         <ChatContent conversations={conversations} />
         <ChatForm sendMessage={sendMessage} />
       </div>

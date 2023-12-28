@@ -29,7 +29,7 @@ export const Chat = () => {
         <div className='flex flex-row justify-end my-2'>
           <ButtonIcon handleClick={toggleChatModal} iconText={faGear} />
         </div>
-        <div className='flex flex-col justify-center items-center'>
+        <div className='flex flex-col justify-center items-center h-100'>
           <ChatContent conversations={conversations} />
           <ChatForm sendMessage={sendMessage} />
         </div>

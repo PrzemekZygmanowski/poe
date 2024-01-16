@@ -1,13 +1,17 @@
-import { IConversation, IConversations } from "../helpers/interfaces";
+import { IConversation, IChatContent } from "../helpers/interfaces";
 import "./ChatContent.css";
 import poeimg from "../../../assets/poe.png";
 import developerimg from "../../../assets/developer.png";
 
-export const ChatContent = ({ conversations }: IConversations) => {
-  console.log(conversations);
+export const ChatContent = ({ conversations, heightValue }: IChatContent) => {
+  const heightVariants = {
+    big: "h-[90%]",
+    small: "h-80",
+  };
 
   return (
-    <div className='chat-content__container bg-transparent text-lightSky_400 rounded border-lightSky_400 border-2 w-11/12	 h-80 mb-8 overflow-y-scroll'>
+    <div
+      className={`${heightVariants[heightValue]} chat-content__container bg-transparent text-lightSky_400 rounded border-lightSky_400 border-2 w-11/12 mb-8 overflow-y-scroll`}>
       {conversations?.map((conversation: IConversation, i: number) => {
         return (
           <div key={i}>

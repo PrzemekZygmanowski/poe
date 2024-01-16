@@ -1,6 +1,6 @@
 import { Dialog, Transition } from "@headlessui/react";
 import { Fragment } from "react";
-import { bigDialog } from "./interfaces";
+import { IBigDialog } from "./interfaces";
 import { SmallTitle } from "./typography/SmallTitle";
 import { ButtonIcon } from "./ButtonIcon";
 import { faCircleXmark } from "@fortawesome/free-solid-svg-icons";
@@ -10,7 +10,7 @@ export const BigDialog = ({
   handleCloseDialog,
   title,
   children,
-}: bigDialog) => {
+}: IBigDialog) => {
   return (
     <>
       <Transition show={isModalActive} as={Fragment}>
@@ -48,6 +48,7 @@ export const BigDialog = ({
                     <ButtonIcon
                       handleClick={handleCloseDialog}
                       iconText={faCircleXmark}
+                      status='inactive'
                     />
                   </div>
                   <div className='mt-4'>{children}</div>

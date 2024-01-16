@@ -1,7 +1,7 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { linkIcon } from "./interfaces";
+import { ILinkIcon } from "./interfaces";
 
-export const LinkIcon = ({ url, iconText }: linkIcon) => {
+export const LinkIcon = ({ url, iconText }: ILinkIcon) => {
   return (
     <a
       href={url}

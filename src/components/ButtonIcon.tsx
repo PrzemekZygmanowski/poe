@@ -1,11 +1,16 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { buttonIcon } from "./interfaces";
+import { IButtonIcon } from "./interfaces";
 
-export const ButtonIcon = ({ handleClick, iconText }: buttonIcon) => {
+export const ButtonIcon = ({ handleClick, iconText, status }: IButtonIcon) => {
+  const colorVariants = {
+    active: "text-lightSky_400",
+    inactive: "text-lightSlate_400",
+  };
+
   return (
     <button
       onClick={handleClick}
-      className='mx-5 w-8 flex justify-center aspect-square	text-smallTitle text-lightSlate_400 focus:text-lightSky_400 '>
+      className={`${colorVariants[status]} mx-5 w-8 flex justify-center aspect-square	text-smallTitle`}>
       <FontAwesomeIcon icon={iconText} />
     </button>
   );

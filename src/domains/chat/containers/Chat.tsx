@@ -27,10 +27,14 @@ export const Chat = () => {
           <SmallTitle smallTitleText='Chat' />
         </div>
         <div className='flex flex-row justify-end my-2'>
-          <ButtonIcon handleClick={toggleChatModal} iconText={faGear} />
+          <ButtonIcon
+            handleClick={toggleChatModal}
+            iconText={faGear}
+            status={isModalActive ? "active" : "inactive"}
+          />
         </div>
-        <div className='flex flex-col justify-center items-center h-100'>
-          <ChatContent conversations={conversations} />
+        <div className='flex flex-col justify-center items-center '>
+          <ChatContent conversations={conversations} heightValue='small' />
           <ChatForm sendMessage={sendMessage} />
         </div>
       </div>

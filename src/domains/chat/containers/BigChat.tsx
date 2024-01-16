@@ -1,5 +1,5 @@
 import { BigDialog } from "../../../components/BigDialog";
-import { chatDialog } from "../../../components/interfaces";
+import { IChatDialog } from "../../../components/interfaces";
 import { conversationsArray } from "../../../data/mocks/conversation";
 import { ChatContent } from "../components/ChatContent";
 import { ChatForm } from "../components/ChatForm";
@@ -8,7 +8,7 @@ export const BigChat = ({
   isModalActive,
   handleCloseDialog,
   sendMessage,
-}: chatDialog) => {
+}: IChatDialog) => {
   const { conversations } = conversationsArray;
 
   return (
@@ -16,8 +16,8 @@ export const BigChat = ({
       isModalActive={isModalActive}
       handleCloseDialog={handleCloseDialog}
       title='Chat'>
-      <div className='flex flex-col justify-center items-center min-h-screen'>
-        <ChatContent conversations={conversations} />
+      <div className='flex flex-col justify-center items-center min-h-full max-h-[90%]'>
+        <ChatContent conversations={conversations} heightValue='big' />
         <ChatForm sendMessage={sendMessage} />
       </div>
     </BigDialog>

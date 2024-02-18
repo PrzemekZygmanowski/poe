@@ -21,7 +21,11 @@ export const AppMenu = () => {
       <div className='flex flex-row justify-end my-4'>
         <LinkIcon url={chatGptUrl} iconText={faComments} />
         <LinkIcon url={playgroundUrl} iconText={faFutbol} />
-        <ButtonIcon handleClick={toggleSettingsModal} iconText={faGear} />
+        <ButtonIcon
+          handleClick={toggleSettingsModal}
+          iconText={faGear}
+          status={isModalActive ? "active" : "inactive"}
+        />
       </div>
       <AppMenuDialog
         isModalActive={isModalActive}

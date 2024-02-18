@@ -13,7 +13,13 @@ export const ChatForm = ({ sendMessage }: IChatForm) => {
 
   const minHeight = 40;
   const maxHeight = 200;
-
+  /**
+   * Adjusts the height of the textarea based on its content.
+   * @param {React.RefObject<HTMLTextAreaElement>} textAreaRef - The ref to the textarea element.
+   * @param {number} minHeight - The minimum height of the textarea.
+   * @param {number} maxHeight - The maximum height of the textarea.
+   * @param {string} text - The content of the textarea.
+   */
   useEffect(() => {
     if (textAreaRef.current) {
       textAreaRef.current.style.height = `${minHeight}px`;

@@ -5,7 +5,7 @@ import developerimg from "../../../assets/developer.png";
 
 export const ChatContent = ({ conversations, heightValue }: IChatContent) => {
   const heightVariants = {
-    big: "h-[90%]",
+    big: "min-h-[85%]",
     small: "h-80",
   };
 

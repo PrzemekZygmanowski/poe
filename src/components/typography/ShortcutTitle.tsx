@@ -4,6 +4,7 @@ export const ShortcutTitle = ({ shortcutText, textColor }: shortcut) => {
   const colorVariants = {
     active: "text-darkSky_950",
     inactive: "text-lightSlate_400",
+    light: "text-lightSky_400",
   };
   return (
     <span

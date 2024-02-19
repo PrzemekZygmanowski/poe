@@ -1,7 +1,12 @@
-import React from 'react'
+import { IShortCutElement, IShortCutElements } from "../helpers/interfaces";
+import { ShortCutElement } from "./ShortCuElement";
 
-export const ShortcutList = () => {
+export const ShortcutList = (shortCutElementList: IShortCutElements) => {
+  const { shortcuts } = shortCutElementList;
   return (
-    <div>ShortcutList</div>
-  )
-}
+    shortcuts &&
+    shortcuts.map((shortCutElement: IShortCutElement) => {
+      <ShortCutElement key={shortCutElement.id} {...shortCutElement} />;
+    })
+  );
+};

@@ -1,17 +1,17 @@
-import { Avatar } from "../../../components/Avatar";
 import { BigDialog } from "../../../components/BigDialog";
-import { bigDialog } from "../../../components/interfaces";
+import { IBigDialog } from "../../../components/interfaces";
+import { MenuTabs } from "./MenuTabs";
 
 export const AppMenuDialog = ({
   isModalActive,
   handleCloseDialog,
-}: bigDialog) => {
+}: IBigDialog) => {
   return (
     <BigDialog
       isModalActive={isModalActive}
       handleCloseDialog={handleCloseDialog}
       title='Settings'>
-      <Avatar />
+      <MenuTabs />
     </BigDialog>
   );
 };

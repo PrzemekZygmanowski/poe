@@ -1,12 +1,10 @@
 import React from "react";
 import { ShortcutTitle } from "../../../components/typography/ShortcutTitle";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { IShortCutElement } from "../helpers/interfaces";
+import { IShortCut } from "../../../interfaces/interfaces";
 
-export const ShortCutElement: React.FC<IShortCutElement> = (
-  shortcutProps: IShortCutElement
-) => {
-  const { title, icon, model, category, context } = shortcutProps;
+export const ShortCutElement = (shortcutProps: IShortCut) => {
+  const { title, icon, chatParams } = shortcutProps;
 
   return (
     <div className='flex flex-col'>
@@ -21,17 +19,17 @@ export const ShortCutElement: React.FC<IShortCutElement> = (
 
       <div className='flex flex-row'>
         <ShortcutTitle shortcutText='Model' textColor='inactive' />
-        <ShortcutTitle shortcutText={model} textColor='light' />
+        <ShortcutTitle shortcutText={chatParams.model} textColor='light' />
       </div>
 
       <div className='flex flex-row'>
         <ShortcutTitle shortcutText='Category' textColor='inactive' />
-        <ShortcutTitle shortcutText={category} textColor='light' />
+        <ShortcutTitle shortcutText={chatParams.category} textColor='light' />
       </div>
 
       <div className='flex flex-row'>
         <ShortcutTitle shortcutText='Context' textColor='inactive' />
-        <ShortcutTitle shortcutText={context} textColor='light' />
+        <ShortcutTitle shortcutText={chatParams.context} textColor='light' />
       </div>
     </div>
   );

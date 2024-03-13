@@ -1,9 +1,9 @@
 import { configureStore } from "@reduxjs/toolkit";
-import modelReducer from "./features/reducers/modelSlice";
 import shortcutStateSlice from "./domains/shortcuts/features/reducers/shortcutStateSlice";
+import shortcutListStateSlice from "./features/reducers/shortcutListStateSlice";
 
 const store = configureStore({
-  reducer: { model: modelReducer, shortcutState: shortcutStateSlice },
+  reducer: { shortcutState: shortcutStateSlice, shortcutListState: shortcutListStateSlice },
 });
 
 // Infer the `RootState` and `AppDispatch` types from the store itself

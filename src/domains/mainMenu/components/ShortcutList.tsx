@@ -1,15 +1,16 @@
 import { IShortCut, IShortCuts } from "../../../interfaces/interfaces";
 import { ShortCutElement } from "./ShortCuElement";
 
-export const ShortcutList = (shortCutElementList: IShortCuts) => {
+interface IShortcutList {
+  shortCutElementList: IShortCuts;
+}
+
+export const ShortcutList = ({ shortCutElementList }: IShortcutList) => {
   return (
     <>
       {shortCutElementList &&
         shortCutElementList.map((shortCutElement: IShortCut) => (
-          <ShortCutElement
-            key={shortCutElement.id}
-            {...shortCutElement}
-          />
+          <ShortCutElement key={shortCutElement.id} {...shortCutElement} />
         ))}
     </>
   );

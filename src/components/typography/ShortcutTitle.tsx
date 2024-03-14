@@ -9,7 +9,6 @@ export const ShortcutTitle = ({ shortcutText, textColor }: shortcut) => {
   return (
     <span
       className={`${colorVariants[textColor]} text-shortcut focus:text-lightSky_400 `}>
-      {" "}
       {shortcutText}
     </span>
   );

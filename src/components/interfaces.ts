@@ -23,3 +23,8 @@ export interface IBigDialog {
 export interface IChatDialog extends IBigDialog {
   sendMessage: (message: string) => void;
 }
+
+export interface IButtonProps {
+  handleClick: () => void;
+  text: string;
+}

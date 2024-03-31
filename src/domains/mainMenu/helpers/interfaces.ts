@@ -1,5 +1,5 @@
 // import { IconDefinition } from "@fortawesome/fontawesome-svg-core"
-import React, { ComponentType } from "react"
+import  { ComponentType } from "react"
 
 export interface IMenuTab {
     id: number

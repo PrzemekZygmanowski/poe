@@ -33,7 +33,7 @@ export const Chat = () => {
             status={isModalActive ? "active" : "inactive"}
           />
         </div>
-        <div className='flex flex-col justify-center items-center '>
+        <div className='flex flex-col justify-center items-center min-h-max'>
           <ChatContent conversations={conversations} heightValue='small' />
           <ChatForm sendMessage={sendMessage} />
         </div>

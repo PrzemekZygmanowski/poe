@@ -39,6 +39,13 @@ export const { setShortcutState, reset, updateChatParam } =
   shortcutStateSlice.actions;
 
 export const selectShortcutState = (state: IShortCut) => state;
+export const selectedShortcutTitle = (state: { shortcutState: IShortCut }) => state.shortcutState.title;
+export const selectedShortcutId = (state: IShortCut) => state.id;
+
+export const selectShortcutIdAndTitle = (state: { shortcutState: IShortCut }) => {
+  return { id: state.shortcutState.id, title: state.shortcutState.title };
+};
+
 // export const selectEngineStatus = state => state.carState.engineOn;
 // export const selectNavigationStatus = state => state.carState.navigationOn;
 

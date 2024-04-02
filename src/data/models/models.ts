@@ -1,44 +1,8 @@
-export const bots = [
-  {
-    id: 1,
-    title: "Javascript",
-    date: "5h ago",
-    commentCount: 5,
-    shareCount: 2,
-  },
-  {
-    id: 2,
-    title: "Devops",
-    date: "5h ago",
-    commentCount: 5,
-    shareCount: 2,
-  },
-  {
-    id: 3,
-    title: "Databse",
-    date: "5h ago",
-    commentCount: 5,
-    shareCount: 2,
-  },
-  {
-    id: 4,
-    title: "Errors",
-    date: "5h ago",
-    commentCount: 5,
-    shareCount: 2,
-  },
-  {
-    id: 5,
-    title: "Tailwind",
-    date: "Jan 7",
-    commentCount: 29,
-    shareCount: 16,
-  },
-  {
-    id: 6,
-    title: "Investing",
-    date: "2d ago",
-    commentCount: 9,
-    shareCount: 5,
-  },
+import { Model } from "../../interfaces/interfaces";
+
+export const models: Model[] = [
+  { id: 1, name: "gpt-4" },
+  { id: 2, name: "gpt-3.5-turbo" },
+  { id: 3, name: "text-embedding-3-small" },
+  { id: 4, name: "dall-e-3" },
 ];

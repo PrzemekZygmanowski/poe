@@ -29,3 +29,8 @@ export interface IShortCut {
 }
 
 export type IShortCuts = IShortCut[];
+
+export interface Model {
+  id: number;
+  name: string;
+}

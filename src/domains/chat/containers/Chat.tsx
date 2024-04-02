@@ -6,6 +6,7 @@ import { useState } from "react";
 import { ButtonIcon } from "../../../components/ButtonIcon.tsx";
 import { faGear } from "@fortawesome/free-solid-svg-icons";
 import { BigChat } from "./BigChat.tsx";
+import { ListBox } from "../../../components/ListBox.tsx";
 
 export const Chat = () => {
   const [isModalActive, setModalActive] = useState(false);
@@ -33,9 +34,10 @@ export const Chat = () => {
             status={isModalActive ? "active" : "inactive"}
           />
         </div>
-        <div className='flex flex-col justify-center items-center min-h-max'>
+        <div className='flex flex-col justify-center items-center '>
           <ChatContent conversations={conversations} heightValue='small' />
           <ChatForm sendMessage={sendMessage} />
+          <ListBox />
         </div>
       </div>
       <BigChat

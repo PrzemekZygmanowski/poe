@@ -37,7 +37,10 @@ export const Chat = () => {
         <div className='flex flex-col justify-center items-center '>
           <ChatContent conversations={conversations} heightValue='small' />
           <ChatForm sendMessage={sendMessage} />
+          <div className='flex justify-between w-11/12'>
           <ListBox />
+          <ListBox />
+          </div>
         </div>
       </div>
       <BigChat

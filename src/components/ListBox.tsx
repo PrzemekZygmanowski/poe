@@ -3,7 +3,13 @@ import { Listbox, Transition } from "@headlessui/react";
 import { CheckIcon, ChevronUpDownIcon } from "@heroicons/react/20/solid";
 import { models } from "../data/models/models";
 
-export const ListBox = () => {
+export interface IListBox{
+    data: Model[];
+listBoxPosition:string;
+
+}
+
+export const ListBox = ({}) => {
   const [selected, setSelected] = useState(models[0]);
   const [position, setPosition] = useState("above");
   const listBoxPosition = {
@@ -14,7 +20,7 @@ export const ListBox = () => {
     <div className='w-72'>
       <Listbox value={selected} onChange={setSelected} horizontal>
         <div className='relative mt-1'>
-          <Listbox.Button className='relative w-3/4 cursor-default py-2 pl-3 pr-10 text-left'>
+          <Listbox.Button className='relative w-3/4 cursor-default pb-2 pl-3 pr-10 text-left'>
             <span className='block truncate text-lightSlate_400 focus:text-lightSky_400 '>
               {selected.name}
             </span>

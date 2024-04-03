@@ -38,8 +38,7 @@ export const Chat = () => {
           <ChatContent conversations={conversations} heightValue='small' />
           <ChatForm sendMessage={sendMessage} />
           <div className='flex justify-between w-11/12'>
-          <ListBox />
-          <ListBox />
+            <ListBox listBoxProps />
           </div>
         </div>
       </div>

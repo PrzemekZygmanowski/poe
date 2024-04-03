@@ -2,14 +2,9 @@ import { Fragment, useState } from "react";
 import { Listbox, Transition } from "@headlessui/react";
 import { CheckIcon, ChevronUpDownIcon } from "@heroicons/react/20/solid";
 import { models } from "../data/models/models";
+import { IListBox } from "../interfaces/interfaces";
 
-export interface IListBox{
-    data: Model[];
-listBoxPosition:string;
-
-}
-
-export const ListBox = ({}) => {
+export const ListBox = (listBoxProps: IListBox) => {
   const [selected, setSelected] = useState(models[0]);
   const [position, setPosition] = useState("above");
   const listBoxPosition = {

@@ -6,3 +6,4 @@ export const models: Model[] = [
   { id: 3, name: "text-embedding-3-small" },
   { id: 4, name: "dall-e-3" },
 ];
+
